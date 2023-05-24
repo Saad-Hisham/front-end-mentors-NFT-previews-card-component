@@ -8,7 +8,7 @@ footer {
     width: 100%;
     text-align: center;
     color: white;
-     z-index: -1;
+     z-index: 0;
 }
 
 footer a:nth-of-type(2) {
@@ -39,6 +39,7 @@ main {
     -webkit-box-shadow: 1px 3px 5px 17px rgba(12, 23, 41, 0.75);
     -moz-box-shadow: 1px 3px 5px 17px rgba(12, 23, 41, 0.75);
     position: relative;
+     z-index: 1;
 }
 
 main::before {
