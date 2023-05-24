@@ -1,0 +1,201 @@
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+footer a:nth-of-type(2) {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #17fffd;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0d1a2d;
+}
+
+main {
+    min-height: 595px;
+    max-height: 595px;
+    min-width: 350px;
+    max-width: 350px;
+    background-color: #15273f;
+    border-radius: 1rem;
+    box-shadow: 1px 3px 5px 17px rgba(12, 23, 41, 0.75);
+    -webkit-box-shadow: 1px 3px 5px 17px rgba(12, 23, 41, 0.75);
+    -moz-box-shadow: 1px 3px 5px 17px rgba(12, 23, 41, 0.75);
+    position: relative;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    box-shadow: 1px 3px 37px 17px rgba(12, 23, 41, 0.75);
+    -webkit-box-shadow: 1px 3px 37px 17px rgba(12, 23, 41, 0.75);
+    -moz-box-shadow: 1px 3px 37px 17px rgba(12, 23, 41, 0.75);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.image-container>img {
+    display: block;
+    width: 302px;
+    border-radius: 0.5rem;
+    margin: auto;
+    margin-top: 24px;
+}
+
+h1 {
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #95a6c4;
+}
+
+.main-info-container,
+.info-container {
+    width: 284px;
+    margin-left: 25px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-container>div {
+    display: flex;
+    width: 92px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-container>div {
+    color: #17fffd;
+}
+
+.info-container>div:nth-of-type(2) {
+    color: #8facd6;
+}
+
+hr {
+    width: 90%;
+    height: 1px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-color: #acadad;
+    opacity: .2;
+    margin-top: 25px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #6a7f9c;
+    width: 69%;
+    margin-left: 9px;
+    margin-top: 25px;
+
+}
+
+.avatar-container img {
+    width: 32px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+span.name {
+    color: white;
+}
+
+h1:hover {
+    color: #17fffd;
+}
+
+span.name:hover {
+    color: #17fffd;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+}
+
+div.overlay::before {
+    content: "";
+    position: absolute;
+    background-color: #17fffd;
+    width: 302px;
+    height: 100%;
+    top: 0;
+    left: 23px;
+    margin: auto;
+    border-radius: .5rem;
+    opacity: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: .5;
+}
+div.overlay::after{
+    content: "";
+    background-image: url("./nft-preview-card-component-main/images/icon-view.svg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+div.overlay img {
+    width: 4rem;
+    height: 4rem;
+}
+.image-container{
+    cursor: pointer;
+}
+.image-container:hover div.overlay::before,.image-container:hover div.overlay::after {
+   
+    display: flex;
+    animation: sclae .5s ease-in-out forwards;
+
+}
+
+@keyframes sclae {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
